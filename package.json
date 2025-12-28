@@ -1,0 +1,21 @@
+{
+  "name": "sdpromptreader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^39.2.7",
+    "electron-squirrel-startup": "^1.0.1"
+  },
+  "dependencies": {
+    "exifreader": "^4.33.1"
+  }
+}
