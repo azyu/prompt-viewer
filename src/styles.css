@@ -145,9 +145,34 @@ html {
 /* Metadata Fields */
 h2 {
     font-size: 1.2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
+    /* Adjusted for alignment */
     font-weight: 600;
     letter-spacing: -0.5px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.mode-selector {
+    background-color: var(--bg-input);
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 4px 8px;
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.mode-selector:hover {
+    border-color: var(--accent);
 }
 
 .field-group {
