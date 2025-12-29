@@ -64,6 +64,18 @@ Artifacts are generated on every push to `main` and can be downloaded from the "
 
 ISC
 
+## Troubleshooting
+
+### macOS: "App is damaged" or cannot be opened
+
+On macOS, locally built unsigned apps may be blocked by Gatekeeper. To fix this, remove the quarantine attribute:
+
+```bash
+xattr -cr out/prompt-viewer-darwin-arm64/Prompt\ Viewer.app
+# OR
+xattr -cr /path/to/your/Prompt\ Viewer.app
+```
+
 ## Disclaimer
 
 This application was created by me and **Antigravity (Gemini 3 Pro)**. Please do not expect the highest code quality in this repo (yet).
