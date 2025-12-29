@@ -1,7 +1,7 @@
 {
-  "name": "sdpromptreader",
+  "name": "prompt-viewer",
   "version": "1.0.0",
-  "description": "A simple SD Prompt Reader",
+  "description": "A refined SD Prompt Reader",
   "main": "src/main.js",
   "scripts": {
     "start": "electron-forge start",
