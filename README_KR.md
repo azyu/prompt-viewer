@@ -55,3 +55,9 @@ npm run make
 ## 라이센스 (License)
 
 ISC
+
+## 면책 조항 (Disclaimer)
+
+이 프로젝트는 저와 **Antigravity (Gemini 3 Pro)**가 함께 만들었습니다. 따라서 아직은 프로젝트에서 최상의 코드 품질을 기대하지는 말아 주세요.
+
+이 프로젝트는 Google의 승인을 받지 않았으며, Google 또는 Antigravity 자산의 제작 및 관리에 공식적으로 관여하는 그 누구의 견해나 의견을 반영하지 않습니다.

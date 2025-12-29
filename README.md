@@ -55,3 +55,9 @@ The built application (dmg, zip, or setup.exe) will be available in the `out/` d
 ## License
 
 ISC
+
+## Disclaimer
+
+This application was created by me and **Antigravity (Gemini 3 Pro)**. Please do not expect the highest code quality in this repo (yet).
+
+This project isn't endorsed by Google and doesn't reflect the views or opinions of Google or anyone officially involved in producing or managing Google/Antigravity properties.
