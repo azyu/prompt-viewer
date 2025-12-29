@@ -306,6 +306,26 @@ button {
   transform: translateY(1px);
 }
 
+.btn-icon {
+  background: transparent;
+  color: var(--text-secondary);
+  padding: 4px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.btn-icon:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+}
+
+.btn-icon:active {
+  transform: translateY(1px);
+}
+
 /* Attributes Grid */
 /* Attributes List (Table-like) */
 .attributes-list {

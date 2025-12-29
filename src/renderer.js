@@ -14,6 +14,7 @@ const promptModeSelector = document.getElementById('prompt-mode-selector');
 const btnCopyPositive = document.getElementById('btn-copy-positive');
 const btnCopyNegative = document.getElementById('btn-copy-negative');
 const btnCopyAttributes = document.getElementById('btn-copy-attributes');
+const btnReset = document.getElementById('btn-reset');
 
 // State
 let currentPromptData = {
@@ -74,10 +75,14 @@ btnCopyAttributes.addEventListener('click', () => {
     copyToClipboard(tags, btnCopyAttributes);
 });
 
+btnReset.addEventListener('click', resetUI);
+
 
 // --- Core Logic ---
 
 function processFile(file) {
+    resetUI(); // Clear previous state immediately
+
     if (file.type !== 'image/png' && file.type !== 'image/jpeg' && file.type !== 'image/webp') {
         alert('Supported formats: PNG, JPEG, WebP');
         return;
@@ -116,16 +121,17 @@ function processFile(file) {
 }
 
 function displayMetadata(tags) {
-    // Clear previous
-    positivePromptArea.value = '';
-    negativePromptArea.value = '';
-    attributesList.innerHTML = '';
-
-    // Reset State
-    currentPromptData = {
-        positive: { rendered: '', source: '' },
-        negative: { rendered: '', source: '' }
-    };
+    clearMetadataFields();
+    
+    // Clear previous - handled by resetUI but specific fields might need explicit clearing if not fully covered
+    // Actually resetUI handles everything, so we just use that.
+    
+    // Wait, resetUI clears the image too. But here we just want to clear metadata fields before populating them?
+    // No, displayMetadata is called after processFile. processFile sets the image.
+    // If we call resetUI here, we clear the image we just set!
+    
+    // Let's NOT call resetUI here. Instead, clearMetadataFields().
+    clearMetadataFields();
 
     if (!tags) {
         return; // Size will be added by img.onload
@@ -239,6 +245,29 @@ function copyToClipboard(text, btnElement) {
             btnElement.style.color = '';
         }, 1500);
     });
+}
+
+function clearMetadataFields() {
+    positivePromptArea.value = '';
+    negativePromptArea.value = '';
+    attributesList.innerHTML = '';
+    rawDataArea.value = '';
+    currentPromptData = {
+        positive: { rendered: '', source: '' },
+        negative: { rendered: '', source: '' }
+    };
+}
+
+function resetUI() {
+    // Clear Image
+    previewImg.src = '';
+    previewContainer.classList.add('hidden');
+    emptyState.classList.remove('hidden');
+    fileInput.value = ''; // Reset input so same file can be selected again
+    fileNameDisplay.innerText = '';
+    
+    // Clear Metadata
+    clearMetadataFields();
 }
 
 function handleComfyUI(tags) {
