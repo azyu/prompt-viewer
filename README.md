@@ -44,7 +44,15 @@ npm start
 npm run make
 ```
 
-The built application (dmg, zip, or setup.exe) will be available in the `out/` directory.
+### Automated Builds (GitHub Actions)
+
+This repository uses **GitHub Actions** to automatically build for:
+
+- **Windows** (`.exe`, `.zip`)
+- **macOS** (`.zip`)
+- **Linux** (`.deb`, `.rpm`, `.zip`)
+
+Artifacts are generated on every push to `main` and can be downloaded from the "Actions" tab in GitHub.
 
 ## Technology Stack
 
