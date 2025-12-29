@@ -1,7 +1,8 @@
 node_modules
-.DS_Store
-dist
 out
-.idea
+dist
+.DS_Store
+Thumbs.db
 .vscode
+.idea
 *.log

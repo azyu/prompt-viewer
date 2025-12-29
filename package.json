@@ -1,21 +1,24 @@
 {
   "name": "sdpromptreader",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple SD Prompt Reader",
   "main": "src/main.js",
   "scripts": {
-    "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
   "keywords": [],
-  "author": "",
+  "author": "Antigravity",
   "license": "ISC",
-  "type": "commonjs",
   "devDependencies": {
-    "electron": "^39.2.7",
-    "electron-squirrel-startup": "^1.0.1"
+    "@electron-forge/cli": "^7.2.0",
+    "@electron-forge/maker-squirrel": "^7.2.0",
+    "@electron-forge/maker-zip": "^7.2.0",
+    "electron": "^28.2.0",
+    "electron-squirrel-startup": "^1.0.0"
   },
   "dependencies": {
-    "exifreader": "^4.33.1"
+    "exifreader": "^4.23.0"
   }
 }
