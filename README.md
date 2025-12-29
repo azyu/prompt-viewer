@@ -2,7 +2,7 @@
 
 A Stable Diffusion Prompt Reader designed for macOS and Windows with a dark-themed UI.
 
-![Screenshot](https://via.placeholder.com/800x600?text=Prompt+Viewer+Screenshot)
+![screenshot](https://github.com/user-attachments/assets/e627c259-6ea9-4eeb-a1ab-9d0330171fbe)
 
 ## Features
 
