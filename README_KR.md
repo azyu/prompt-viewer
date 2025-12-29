@@ -44,7 +44,15 @@ npm start
 npm run make
 ```
 
-빌드된 애플리케이션(dmg, zip, setup.exe 등)은 `out/` 디렉토리에서 확인할 수 있습니다.
+### 자동 빌드 (GitHub Actions)
+
+이 저장소는 **GitHub Actions**를 사용하여 다음 환경에 대한 자동 빌드를 지원합니다:
+
+- **Windows** (`.exe`, `.zip`)
+- **macOS** (`.zip`)
+- **Linux** (`.deb`, `.rpm`, `.zip`)
+
+`main` 브랜치에 푸시가 발생할 때마다 아티팩트가 생성되며, GitHub의 "Actions" 탭에서 다운로드할 수 있습니다.
 
 ## 기술 스택 (Technology Stack)
 
