@@ -6,7 +6,7 @@ const previewImg = document.getElementById('preview-img');
 const fileNameDisplay = document.getElementById('file-name');
 const positivePromptArea = document.getElementById('positive-prompt');
 const negativePromptArea = document.getElementById('negative-prompt');
-const attributesGrid = document.getElementById('attributes-grid');
+const attributesList = document.getElementById('attributes-list');
 const rawDataArea = document.getElementById('raw-data');
 const promptModeSelector = document.getElementById('prompt-mode-selector');
 
@@ -65,11 +65,12 @@ btnCopyPositive.addEventListener('click', () => copyToClipboard(positivePromptAr
 btnCopyNegative.addEventListener('click', () => copyToClipboard(negativePromptArea.value, btnCopyNegative));
 btnCopyAttributes.addEventListener('click', () => {
     // Construct a string of attributes
-    const tags = Array.from(attributesGrid.querySelectorAll('.attr-tag')).map(tag => {
-        const label = tag.querySelector('.attr-label').innerText;
-        const value = tag.querySelector('.attr-value').innerText;
+    const rows = Array.from(attributesList.querySelectorAll('.attr-row'));
+    const tags = rows.map(row => {
+        const label = row.querySelector('.attr-label').innerText;
+        const value = row.querySelector('.attr-value').innerText;
         return `${label}: ${value}`;
-    }).join(', ');
+    }).filter(s => !s.includes('No image loaded')).join(', ');
     copyToClipboard(tags, btnCopyAttributes);
 });
 
@@ -108,7 +109,7 @@ function processFile(file) {
             displayMetadata(tags);
         } catch (error) {
             console.error("Metadata parsing failed:", error);
-            attributesGrid.innerHTML = '<div class="attr-item">Error reading metadata</div>';
+            attributesList.innerHTML = '<div class="attr-row placeholder">Error reading metadata</div>';
         }
     };
     bufferReader.readAsArrayBuffer(file);
@@ -118,7 +119,7 @@ function displayMetadata(tags) {
     // Clear previous
     positivePromptArea.value = '';
     negativePromptArea.value = '';
-    attributesGrid.innerHTML = '';
+    attributesList.innerHTML = '';
 
     // Reset State
     currentPromptData = {
@@ -213,16 +214,16 @@ function updatePromptDisplay(mode) {
 
 function createAttributeTag(key, value) {
     // Check if exists
-    const existing = Array.from(attributesGrid.querySelectorAll('.attr-label')).find(el => el.innerText === key);
+    const existing = Array.from(attributesList.querySelectorAll('.attr-label')).find(el => el.innerText === key);
     if (existing) return;
 
     const div = document.createElement('div');
-    div.className = 'attr-tag';
+    div.className = 'attr-row';
     div.innerHTML = `
         <span class="attr-label">${key}</span>
         <span class="attr-value" title="${value}">${value}</span>
     `;
-    attributesGrid.appendChild(div);
+    attributesList.appendChild(div);
 }
 
 function copyToClipboard(text, btnElement) {
