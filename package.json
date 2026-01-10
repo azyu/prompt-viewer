@@ -1,5 +1,6 @@
 {
-  "name": "prompt-viewer",
+  "name": "sd-prompt-viewer",
+  "productName": "SD Prompt Viewer",
   "version": "1.0.0",
   "description": "A refined SD Prompt Reader",
   "main": "src/main.js",

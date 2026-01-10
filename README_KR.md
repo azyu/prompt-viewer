@@ -1,4 +1,4 @@
-# Prompt Viewer (프롬프트 뷰어)
+# SD Prompt Viewer (SD 프롬프트 뷰어)
 
 macOS와 Windows를 위해 디자인된 다크 테마의 Stable Diffusion 프롬프트 리더입니다.
 
@@ -71,9 +71,9 @@ ISC
 macOS에서 로컬로 빌드된 서명되지 않은 앱은 Gatekeeper에 의해 차단될 수 있습니다. 다음 명령어로 격리 속성을 제거하여 해결할 수 있습니다:
 
 ```bash
-xattr -cr out/prompt-viewer-darwin-arm64/Prompt\ Viewer.app
+xattr -cr out/sd-prompt-viewer-darwin-arm64/SD\ Prompt\ Viewer.app
 # 또는
-xattr -cr /path/to/your/Prompt\ Viewer.app
+xattr -cr /path/to/your/SD\ Prompt\ Viewer.app
 ```
 
 ## 면책 조항 (Disclaimer)

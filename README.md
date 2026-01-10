@@ -1,4 +1,4 @@
-# Prompt Viewer
+# SD Prompt Viewer
 
 A Stable Diffusion Prompt Reader designed for macOS and Windows with a dark-themed UI.
 
@@ -71,9 +71,9 @@ ISC
 On macOS, locally built unsigned apps may be blocked by Gatekeeper. To fix this, remove the quarantine attribute:
 
 ```bash
-xattr -cr out/prompt-viewer-darwin-arm64/Prompt\ Viewer.app
+xattr -cr out/sd-prompt-viewer-darwin-arm64/SD\ Prompt\ Viewer.app
 # OR
-xattr -cr /path/to/your/Prompt\ Viewer.app
+xattr -cr /path/to/your/SD\ Prompt\ Viewer.app
 ```
 
 ## Disclaimer
