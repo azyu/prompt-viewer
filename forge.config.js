@@ -1,6 +1,7 @@
 module.exports = {
   packagerConfig: {
     executableName: "sd-prompt-viewer",
+    arch: "x64",
   },
   rebuildConfig: {},
   makers: [
