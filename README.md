@@ -21,10 +21,10 @@ Ensure you have [Node.js](https://nodejs.org/) installed.
 
 ```bash
 # Clone the repository
-git clone https://github.com/azyu/prompt-viewer.git
+git clone https://github.com/azyu/sd-prompt-viewer.git
 
 # Go into the app directory
-cd prompt-viewer
+cd sd-prompt-viewer
 
 # Install dependencies
 npm install

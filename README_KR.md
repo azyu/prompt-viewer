@@ -21,10 +21,10 @@ macOS와 Windows를 위해 디자인된 다크 테마의 Stable Diffusion 프롬
 
 ```bash
 # 저장소 복제
-git clone https://github.com/azyu/prompt-viewer.git
+git clone https://github.com/azyu/sd-prompt-viewer.git
 
 # 디렉토리 이동
-cd prompt-viewer
+cd sd-prompt-viewer
 
 # 의존성 설치
 npm install
